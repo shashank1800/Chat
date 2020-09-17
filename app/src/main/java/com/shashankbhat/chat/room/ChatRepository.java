@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 
 import androidx.paging.DataSource;
 
+import java.util.List;
+
 
 /**
  * Created by SHASHANK BHAT on 15-Sep-20.
@@ -24,6 +26,10 @@ public class ChatRepository {
 
     public void insert(Message message) {
         new InsertTask(message).execute();
+    }
+
+    public List<Message> getAllChat() {
+        return chatDao.getAllChats();
     }
 
     class InsertTask extends AsyncTask<Void, Void, Void>{

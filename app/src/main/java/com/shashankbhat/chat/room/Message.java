@@ -46,10 +46,6 @@ public class Message {
         return isMe;
     }
 
-    public void setMe(boolean me) {
-        isMe = me;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -60,5 +56,12 @@ public class Message {
                 Objects.equals(message, message1.message);
     }
 
-
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", isMe=" + isMe +
+                '}';
+    }
 }

@@ -11,6 +11,8 @@ import androidx.paging.PagedList;
 import com.shashankbhat.chat.room.ChatRepository;
 import com.shashankbhat.chat.room.Message;
 
+import java.util.List;
+
 
 /**
  * Created by SHASHANK BHAT on 15-Sep-20.
@@ -30,6 +32,10 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public void insert(Message message){
         repository.insert(message);
+    }
+
+    public List<Message> getAllChat(){
+        return repository.getAllChat();
     }
 
 }
